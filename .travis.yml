@@ -15,7 +15,7 @@ services:
     - docker build -t jonathanparent/multi-worker ./worker
     # Log in to the docker CLI
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-    # Take those images and push them to docker hub
+    # Take the images and push them to docker hub
     - docker push jonathanparent/multi-client
     - docker push jonathanparent/multi-nginx
     - docker push jonathanparent/multi-server
